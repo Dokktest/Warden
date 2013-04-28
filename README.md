@@ -3,11 +3,16 @@ Warden
 
 Simple PHP user authentication
 
-Warden is an uber simple user authentication library for PHP using a MySQL
-database. 
+Warden is an uber simple user authentication library for PHP using using PDO
+with a MySQL database. 
+
 
 The user table is defined in a configuration ini file and Warden takes care of
-the rest.
+the rest. If APC is available, Warden will check for the existence of the ini
+file in the cache and use that.
+
+Warden also checks for the existance of the table defined in the ini. If this
+table does not exist, Warden will create it based on the ini structure.
 
 
 Sample configuration ini
@@ -53,3 +58,18 @@ indexes[] = 'email'
 identity = 'email'
 credential = 'pass'
 ```
+
+Sample useage
+-------------
+
+```php
+$DatabaseHandle = new PDO('mysql:host=localhost;dbname=randomdb','root', '');
+$warden = new Warden\Warden('some_config.ini',$dbHandle);
+
+$user = $warden->findByPrimaryKey($someUserId);
+```
+
+Warden returns and/or acts upon an stdClass object that contains all the fields
+defininf in the ini.
+
+
