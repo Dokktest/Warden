@@ -230,7 +230,7 @@ class Warden
 
     }
 
-    /*
+    /**
      * Load the ini file or get from APC
      * @param bool $apc
      */ 
