@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a12" title="">
+  <file path="Hash.php" hash="0a286d30b96784f957b4b8fb77a6edcc" package="Warden">
+    <docblock line="2">
+      <description>Hash.php</description>
+      <long-description>&lt;p&gt;Warden user authentication&lt;/p&gt;</long-description>
+      <tag line="2" name="author" description="Barry O'Mahony &lt;the.ewok@gmail.com&gt;"/>
+      <tag line="2" name="version" description="1.0"/>
+      <tag line="2" name="package" description="Warden"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Warden" line="22" package="Default">
+      <extends/>
+      <implements>\Warden\HashInterface</implements>
+      <name>Hash</name>
+      <full_name>\Warden\Hash</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Warden" line="29" package="Default">
+        <name>hashString</name>
+        <full_name>hashString</full_name>
+        <docblock line="24">
+          <description>Hash the string with the salt</description>
+          <long-description></long-description>
+          <tag line="24" name="param" description="" type="string" variable="$string">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="24" name="param" description="" type="string" variable="$salt">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="29">
+          <name>$string</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="29">
+          <name>$salt</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="22" code="50000">No DocBlock was found for \Warden\Hash</error>
+    </parse_markers>
+  </file>
+  <file path="HashInterface.php" hash="09892a802db144cfa58b9b91d0a1b9a0" package="Default">
+    <interface namespace="Warden" line="5" package="Default">
+      <name>HashInterface</name>
+      <full_name>\Warden\HashInterface</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Warden" line="7" package="Default">
+        <name>hashString</name>
+        <full_name>hashString</full_name>
+        <argument line="7">
+          <name>$string</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="7">
+          <name>$salt</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file HashInterface.php</error>
+      <error line="7" code="50010">No DocBlock was found for method hashString()</error>
+    </parse_markers>
+  </file>
+  <file path="Salt.php" hash="2cb3f180e3261b1fd4d928be2947e434" package="Warden">
+    <docblock line="2">
+      <description>Salt.php</description>
+      <long-description>&lt;p&gt;Warden user authentication&lt;/p&gt;</long-description>
+      <tag line="2" name="author" description="Barry O'Mahony &lt;the.ewok@gmail.com&gt;"/>
+      <tag line="2" name="version" description="1.0"/>
+      <tag line="2" name="package" description="Warden"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Warden" line="22" package="Default">
+      <extends/>
+      <implements>\Warden\SaltInterface</implements>
+      <name>Salt</name>
+      <full_name>\Warden\Salt</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Warden" line="24" package="Default">
+        <name>getSalt</name>
+        <full_name>getSalt</full_name>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="22" code="50000">No DocBlock was found for \Warden\Salt</error>
+      <error line="24" code="50010">No DocBlock was found for method getSalt()</error>
+    </parse_markers>
+  </file>
+  <file path="SaltInterface.php" hash="215630ae2ad7cd6daccfb0d4fcff9dda" package="Warden">
+    <docblock line="2">
+      <description>SaltInterface.php</description>
+      <long-description>&lt;p&gt;Warden user authentication&lt;/p&gt;</long-description>
+      <tag line="2" name="author" description="Barry O'Mahony &lt;the.ewok@gmail.com&gt;"/>
+      <tag line="2" name="version" description="1.0"/>
+      <tag line="2" name="package" description="Warden"/>
+    </docblock>
+    <interface namespace="Warden" line="21" package="Default">
+      <name>SaltInterface</name>
+      <full_name>\Warden\SaltInterface</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Warden" line="23" package="Default">
+        <name>getSalt</name>
+        <full_name>getSalt</full_name>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="23" code="50010">No DocBlock was found for method getSalt()</error>
+    </parse_markers>
+  </file>
+  <file path="Warden.php" hash="44dba2a0016030caacfd73c18dcae661" package="Warden">
+    <docblock line="2">
+      <description>Warden.php</description>
+      <long-description>&lt;p&gt;Warden user authentication&lt;/p&gt;</long-description>
+      <tag line="2" name="author" description="Barry O'Mahony &lt;the.ewok@gmail.com&gt;"/>
+      <tag line="2" name="version" description="1.0"/>
+      <tag line="2" name="package" description="Warden"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Warden" line="22" package="Default">
+      <extends/>
+      <name>Warden</name>
+      <full_name>\Warden\Warden</full_name>
+      <property final="false" static="false" visibility="private" line="29" namespace="Warden" package="Default">
+        <name>$iniPath</name>
+        <default></default>
+        <docblock line="24">
+          <description>Path to ini</description>
+          <long-description></long-description>
+          <tag line="24" name="access" description="private"/>
+          <tag line="24" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="36" namespace="Warden" package="Default">
+        <name>$ini</name>
+        <default></default>
+        <docblock line="31">
+          <description>Parsed ini</description>
+          <long-description></long-description>
+          <tag line="31" name="access" description="private"/>
+          <tag line="31" name="var" description="" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="43" namespace="Warden" package="Default">
+        <name>$hash</name>
+        <default></default>
+        <docblock line="38">
+          <description>Hash object with HashInterface</description>
+          <long-description></long-description>
+          <tag line="38" name="access" description="private"/>
+          <tag line="38" name="var" description="" type="object">
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="50" namespace="Warden" package="Default">
+        <name>$salt</name>
+        <default></default>
+        <docblock line="45">
+          <description>Salt object with SaltInterface</description>
+          <long-description></long-description>
+          <tag line="45" name="access" description="private"/>
+          <tag line="45" name="var" description="" type="object">
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Warden" line="59" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="52">
+          <description>Constructor</description>
+          <long-description></long-description>
+          <tag line="52" name="param" description="" type="string" variable="$iniPath">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="52" name="param" description="" type="\Warden\PDO" variable="$databaseHandle">
+            <type by_reference="false">\Warden\PDO</type>
+          </tag>
+          <tag line="52" name="param" description="" type="\Warden\HashInteface" variable="$hash">
+            <type by_reference="false">\Warden\HashInteface</type>
+          </tag>
+          <tag line="52" name="param" description="" type="\Warden\SaltInterface" variable="$salt">
+            <type by_reference="false">\Warden\SaltInterface</type>
+          </tag>
+        </docblock>
+        <argument line="59">
+          <name>$iniPath</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="59">
+          <name>$databaseHandle</name>
+          <default></default>
+          <type>\PDO</type>
+        </argument>
+        <argument line="59">
+          <name>$hash</name>
+          <default>null</default>
+          <type>\Warden\HashInterface</type>
+        </argument>
+        <argument line="59">
+          <name>$salt</name>
+          <default>null</default>
+          <type>\Warden\SaltInterface</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Warden" line="90" package="Default">
+        <name>save</name>
+        <full_name>save</full_name>
+        <docblock line="86">
+          <description>Save the user</description>
+          <long-description></long-description>
+          <tag line="86" name="param" description="" type="\Warden\stdClass" variable="$user">
+            <type by_reference="false">\Warden\stdClass</type>
+          </tag>
+        </docblock>
+        <argument line="90">
+          <name>$user</name>
+          <default></default>
+          <type>\stdClass</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Warden" line="105" package="Default">
+        <name>findByPrimaryKey</name>
+        <full_name>findByPrimaryKey</full_name>
+        <docblock line="100">
+          <description>Find a user by the primary key</description>
+          <long-description></long-description>
+          <tag line="100" name="param" description="" type="mixed" variable="$id">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="100" name="return" description="" type="\Warden\stdClass">
+            <type by_reference="false">\Warden\stdClass</type>
+          </tag>
+        </docblock>
+        <argument line="105">
+          <name>$id</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Warden" line="130" package="Default">
+        <name>findByAltKey</name>
+        <full_name>findByAltKey</full_name>
+        <docblock line="124">
+          <description>Find a user by the alternative key</description>
+          <long-description></long-description>
+          <tag line="124" name="param" description="" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="124" name="param" description="" type="mixed" variable="$value">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="124" name="return" description="" type="\Warden\stdClass">
+            <type by_reference="false">\Warden\stdClass</type>
+          </tag>
+        </docblock>
+        <argument line="130">
+          <name>$key</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="130">
+          <name>$value</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Warden" line="156" package="Default">
+        <name>setPassword</name>
+        <full_name>setPassword</full_name>
+        <docblock line="151">
+          <description>Set the password for the user</description>
+          <long-description></long-description>
+          <tag line="151" name="param" description="" type="string" variable="$password">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="151" name="param" description="" type="\Warden\stdClass" variable="$user">
+            <type by_reference="false">\Warden\stdClass</type>
+          </tag>
+        </docblock>
+        <argument line="156">
+          <name>$password</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="156">
+          <name>$user</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Warden" line="167" package="Default">
+        <name>delete</name>
+        <full_name>delete</full_name>
+        <docblock line="163">
+          <description>Delete the user from the database</description>
+          <long-description></long-description>
+          <tag line="163" name="param" description="" type="\Warden\stdClass" variable="$user">
+            <type by_reference="false">\Warden\stdClass</type>
+          </tag>
+        </docblock>
+        <argument line="167">
+          <name>$user</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Warden" line="184" package="Default">
+        <name>authenticate</name>
+        <full_name>authenticate</full_name>
+        <docblock line="178">
+          <description>Authenticate the user using the supplied Hash algorithm</description>
+          <long-description></long-description>
+          <tag line="178" name="param" description="" type="string" variable="$password">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="178" name="param" description="" type="\Warden\stdClass" variable="$user">
+            <type by_reference="false">\Warden\stdClass</type>
+          </tag>
+          <tag line="178" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="184">
+          <name>$password</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="184">
+          <name>$user</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Warden" line="195" package="Default">
+        <name>updateUser</name>
+        <full_name>updateUser</full_name>
+        <docblock line="190">
+          <description>Create or update the user</description>
+          <long-description></long-description>
+          <tag line="190" name="param" description="" type="\Warden\stdClass" variable="$user">
+            <type by_reference="false">\Warden\stdClass</type>
+          </tag>
+          <tag line="190" name="param" description="" type="bool" variable="$update">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="195">
+          <name>$user</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="195">
+          <name>$update</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Warden" line="237" package="Default">
+        <name>loadIni</name>
+        <full_name>loadIni</full_name>
+        <docblock line="233">
+          <description>Load the ini file or get from APC</description>
+          <long-description></long-description>
+          <tag line="233" name="param" description="" type="bool" variable="$apc">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="237">
+          <name>$apc</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Warden" line="264" package="Default">
+        <name>tableExists</name>
+        <full_name>tableExists</full_name>
+        <docblock line="260">
+          <description>Check if database table exists</description>
+          <long-description></long-description>
+          <tag line="260" name="param" description="" type="bool" variable="$apc">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="264">
+          <name>$apc</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Warden" line="284" package="Default">
+        <name>createTable</name>
+        <full_name>createTable</full_name>
+        <docblock line="280">
+          <description>Create table</description>
+          <long-description></long-description>
+          <tag line="280" name="param" description="" type="bool" variable="$apc">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="284">
+          <name>$apc</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="22" code="50000">No DocBlock was found for \Warden\Warden</error>
+      <error line="52" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $databaseHandle in __construct()</error>
+      <error line="52" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $hash in __construct()</error>
+      <error line="86" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $user in save()</error>
+    </parse_markers>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="Warden" full_name="Warden"/>
+  <namespace name="Warden" full_name="Warden"/>
+  <marker count="0">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="0"/>
+</project>
